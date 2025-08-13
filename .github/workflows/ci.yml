@@ -39,6 +39,6 @@ jobs:
           EMBEDDINGS_PROVIDER: mock
           TELEGRAM_TOKEN: dummy
         run: |
-          make test
+          python -m pytest -q
 
 
