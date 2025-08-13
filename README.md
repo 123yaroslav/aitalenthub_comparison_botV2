@@ -25,7 +25,7 @@
 ```bash
 git clone <your_repo_url_or_this_archive_unzipped>
 cd itmo-masters-advisor
-cp .env.example .env
+cp env.example .env
 make setup
 make scrape      # скачает и распарсит планы в data/normalized/*.json
 make index       # построит индексы (Chroma + BM25)
@@ -37,6 +37,7 @@ make api         # запустит FastAPI на 8000
 - Python 3.11+
 - (опц.) Java для `tabula-py`, Ghostscript для `camelot-py` (иначе будет fallback на `pdfplumber`)
 - RAM: 2–4 ГБ для индексации локальными эмбеддингами
+- Для CI можно указать `EMBEDDINGS_PROVIDER=mock`, чтобы избежать скачивания модели.
 
 ### Переменные окружения
 - `TELEGRAM_TOKEN` — токен для телеграм-бота
@@ -84,3 +85,19 @@ MIT (при публикации на GitHub).
 
 © 2025
 # aitalenthub_comparison_bot
+
+## Деплой через Docker (GHCR)
+
+Готовый образ публикуется в GitHub Container Registry (GHCR) экшеном CI при пуше в `main`/релизных тегах. Запуск локально:
+
+```bash
+docker run --rm -p 8000:8000 \
+  -e EMBEDDINGS_PROVIDER=local \
+  -e TELEGRAM_TOKEN=__optional__ \
+  ghcr.io/<owner>/<repo>:latest
+```
+
+По умолчанию контейнер выполняет `make scrape && make index`, затем стартует API (`/ask`, `/recommend`) на `0.0.0.0:8000`.
+
+Для продакшена рекомендуется периодически обновлять данные: перезапуск контейнера или отдельный cron‑джоб, который вызывает `make scrape && make index` внутри образа.
+
