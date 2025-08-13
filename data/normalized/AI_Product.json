@@ -1,0 +1,16 @@
+{
+  "program": "AI Product",
+  "version": "",
+  "source_url": "",
+  "courses": [],
+  "rules": {
+    "total_ects": 120,
+    "min_electives_ects": 24,
+    "per_semester_constraints": {
+      "1": {
+        "min": 24,
+        "max": 36
+      }
+    }
+  }
+}
