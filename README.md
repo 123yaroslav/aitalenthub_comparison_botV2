@@ -2,6 +2,8 @@
 
 Готовый MVP системы: парсинг учебных планов, RAG-поиск, рекомендатор выборных и диалоговый Telegram‑бот.
 
+Полностью рабочий телеграмм бот доступный по ссылке: https://t.me/aitalenthub_comparison_bot
+
 **Источники истины (официальные страницы):**
 - AI: https://abit.itmo.ru/program/master/ai
 - AI Product: https://abit.itmo.ru/program/master/ai_product
