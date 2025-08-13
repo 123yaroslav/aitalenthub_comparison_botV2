@@ -2,7 +2,22 @@
   "program": "AI",
   "version": "",
   "source_url": "",
-  "courses": [],
+  "courses": [
+    {"name": "Математические основы ИИ", "module": "core", "type": "core", "ects": 6, "semester": 1, "source_ref": "AI-1"},
+    {"name": "Машинное обучение", "module": "core", "type": "core", "ects": 6, "semester": 1, "source_ref": "AI-2"},
+    {"name": "Анализ данных", "module": "core", "type": "core", "ects": 6, "semester": 1, "source_ref": "AI-10"},
+    {"name": "Базы данных", "module": "core", "type": "core", "ects": 6, "semester": 1, "source_ref": "AI-12"},
+    {"name": "Оптимизация", "module": "core", "type": "core", "ects": 6, "semester": 2, "source_ref": "AI-11"},
+    {"name": "Глубокое обучение", "module": "core", "type": "core", "ects": 6, "semester": 2, "source_ref": "AI-3"},
+    {"name": "Нейронные сети", "module": "elective", "type": "elective", "ects": 6, "semester": 2, "source_ref": "AI-4"},
+    {"name": "Робототехника", "module": "elective", "type": "elective", "ects": 6, "semester": 2, "source_ref": "AI-13"},
+    {"name": "Обработка естественного языка", "module": "elective", "type": "elective", "ects": 6, "semester": 3, "source_ref": "AI-5"},
+    {"name": "Компьютерное зрение", "module": "elective", "type": "elective", "ects": 6, "semester": 3, "source_ref": "AI-6"},
+    {"name": "Распределенные системы", "module": "elective", "type": "elective", "ects": 6, "semester": 3, "source_ref": "AI-14"},
+    {"name": "Научно-исследовательская работа", "module": "research", "type": "core", "ects": 12, "semester": 3, "source_ref": "AI-7"},
+    {"name": "Производственная практика", "module": "internship", "type": "core", "ects": 12, "semester": 4, "source_ref": "AI-8"},
+    {"name": "Финальный проект", "module": "thesis", "type": "core", "ects": 12, "semester": 4, "source_ref": "AI-9"}
+  ],
   "rules": {
     "total_ects": 120,
     "min_electives_ects": 24,

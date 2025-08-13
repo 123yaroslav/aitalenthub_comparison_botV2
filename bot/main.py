@@ -7,13 +7,7 @@ from rag.answer import answer
 from recommender.engine import pick_electives
 from recommender.rules import Profile
 
-load_dotenv()
-TOKEN = os.getenv("TELEGRAM_TOKEN")
-if not TOKEN:
-    raise RuntimeError("TELEGRAM_TOKEN is not set")
-
 dp = Dispatcher()
-bot = Bot(TOKEN, parse_mode="HTML")
 
 KB_MAIN = ReplyKeyboardMarkup(
     keyboard=[[KeyboardButton(text="/compare")],
@@ -61,6 +55,11 @@ async def generic(m: Message):
     await m.answer(res["text"])
 
 async def main():
+    load_dotenv()
+    token = os.getenv("TELEGRAM_TOKEN")
+    if not token:
+        raise RuntimeError("TELEGRAM_TOKEN is not set")
+    bot = Bot(token, parse_mode="HTML")
     await dp.start_polling(bot)
 
 if __name__ == "__main__":

@@ -2,7 +2,22 @@
   "program": "AI Product",
   "version": "",
   "source_url": "",
-  "courses": [],
+  "courses": [
+    {"name": "Продуктовый менеджмент", "module": "core", "type": "core", "ects": 6, "semester": 1, "source_ref": "AIP-1"},
+    {"name": "Основы машинного обучения", "module": "core", "type": "core", "ects": 6, "semester": 1, "source_ref": "AIP-2"},
+    {"name": "Аналитика данных для продукта", "module": "core", "type": "core", "ects": 6, "semester": 1, "source_ref": "AIP-10"},
+    {"name": "Экономика и ценообразование", "module": "core", "type": "core", "ects": 6, "semester": 1, "source_ref": "AIP-11"},
+    {"name": "A/B тестирование", "module": "core", "type": "core", "ects": 6, "semester": 2, "source_ref": "AIP-3"},
+    {"name": "Прикладное глубокое обучение", "module": "elective", "type": "elective", "ects": 6, "semester": 2, "source_ref": "AIP-4"},
+    {"name": "Продуктовая аналитика", "module": "elective", "type": "elective", "ects": 6, "semester": 2, "source_ref": "AIP-12"},
+    {"name": "MLOps", "module": "elective", "type": "elective", "ects": 6, "semester": 2, "source_ref": "AIP-5"},
+    {"name": "Маркетинг и рост", "module": "elective", "type": "elective", "ects": 6, "semester": 3, "source_ref": "AIP-6"},
+    {"name": "Дизайн и UX для ИИ-продуктов", "module": "elective", "type": "elective", "ects": 6, "semester": 3, "source_ref": "AIP-7"},
+    {"name": "Юнит-экономика", "module": "elective", "type": "elective", "ects": 6, "semester": 3, "source_ref": "AIP-13"},
+    {"name": "НИР / проект в компании", "module": "research", "type": "core", "ects": 12, "semester": 3, "source_ref": "AIP-8"},
+    {"name": "Стажировка", "module": "internship", "type": "core", "ects": 12, "semester": 4, "source_ref": "AIP-9"},
+    {"name": "Выпускной проект", "module": "thesis", "type": "core", "ects": 12, "semester": 4, "source_ref": "AIP-14"}
+  ],
   "rules": {
     "total_ects": 120,
     "min_electives_ects": 24,

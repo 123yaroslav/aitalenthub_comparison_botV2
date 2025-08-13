@@ -9,11 +9,8 @@ ALLOWED_TOPICS = [
 
 def is_relevant(q: str, min_score: float = 0.8) -> bool:
     ql = q.lower()
-    if any(t in ql for t in ALLOWED_TOPICS):
-        return True
-    # fall back to weak semantic check
-    hits = hybrid(q, k=3)
-    return any(h.get("score", 0) >= min_score for h in hits)
+    # Strict keyword-based relevancy to avoid false positives on generic queries
+    return any(t in ql for t in ALLOWED_TOPICS)
 
 def answer(query: str, program: str | None = None) -> Dict:
     if not is_relevant(query):
